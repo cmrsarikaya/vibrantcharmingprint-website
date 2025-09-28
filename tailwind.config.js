@@ -1,5 +1,3 @@
-```javascript
-
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
@@ -162,10 +160,4 @@ animation: {
 
 plugins: [require("tailwindcss-animate")],
 
-};
-
-```
-
-### 2.2. postcss.config.js oluşturun
-
-- **"Create new file"** → Dosya adı: `postcss.config.js`
+};  
