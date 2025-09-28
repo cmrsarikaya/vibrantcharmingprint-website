@@ -3,6 +3,10 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductsSection from './components/ProductsSection';
+import AboutSection from './components/AboutSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import SizeGuideSection from './components/SizeGuideSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,9 +14,10 @@ function App() {
       <Header />
       <Hero />
       <ProductsSection />
-      <div className="text-center py-16 bg-white">
-        <p className="text-gray-600">More sections coming soon...</p>
-      </div>
+      <AboutSection />
+      <TestimonialsSection />
+      <SizeGuideSection />
+      <Footer />
     </div>
   );
 }
