@@ -94,7 +94,7 @@ const ProductsSection = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`px-3 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${
                 selectedCategory === category
                   ? 'bg-amber-500 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-amber-50 hover:text-amber-600 border border-gray-200'
