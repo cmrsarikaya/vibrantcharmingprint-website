@@ -1,26 +1,42 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">
-              VibrantCharmingPrint
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Premium Digital Wall Art & Printable Designs
-            </p>
-            <div className="text-lg text-gray-500">
-              Website is loading... More components coming soon!
-            </div>
-          </div>
+    <div className="App">
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #fbbf24 0%, #f97316 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        textAlign: 'center',
+        padding: '20px'
+      }}>
+        <h1 style={{
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#1f2937',
+          marginBottom: '2rem'
+        }}>
+          VibrantCharmingPrint
+        </h1>
+        <p style={{
+          fontSize: '1.5rem',
+          color: '#374151',
+          marginBottom: '2rem'
+        }}>
+          Premium Digital Wall Art & Printable Designs
+        </p>
+        <div style={{
+          fontSize: '1.2rem',
+          color: '#6b7280'
+        }}>
+          Website is working! Ready for components.
         </div>
       </div>
-    </Router>
+    </div>
   );
 }
 
