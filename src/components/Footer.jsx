@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               <a
                 href={storeInfo.socialLinks.etsy}
                 target="_blank"
