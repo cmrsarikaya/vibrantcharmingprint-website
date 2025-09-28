@@ -1,5 +1,3 @@
-```javascript
-
 // Load configuration from environment or config file
 
 const path = require('path');
