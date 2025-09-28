@@ -1,0 +1,255 @@
+```css
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('htt...');
+
+body {
+
+margin: 0;
+
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+
+"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+
+"Helvetica Neue", sans-serif;
+
+-webkit-font-smoothing: antialiased;
+
+-moz-osx-font-smoothing: grayscale;
+
+background: hsl(var(--background));
+
+}
+
+/* Premium Typography Classes */
+
+.font-display {
+
+font-family: 'Playfair Display', serif;
+
+}
+
+.font-body {
+
+font-family: 'Inter', sans-serif;
+
+}
+
+code {
+
+font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+
+monospace;
+
+}
+
+@layer base {
+
+:root {
+
+/* Premium Color Palette - Deep Navy & Warm Cream with Gold Accents */
+
+--background: 45 15% 97%; /* Warm cream background */
+
+--foreground: 220 26% 14%; /* Deep navy text */
+
+--card: 0 0% 100%; /* Pure white cards */
+
+--card-foreground: 220 26% 14%; /* Deep navy card text */
+
+--popover: 0 0% 100%;
+
+--popover-foreground: 220 26% 14%;
+
+--primary: 220 26% 14%; /* Deep navy primary */
+
+--primary-foreground: 45 15% 97%; /* Warm cream on primary */
+
+--secondary: 45 25% 90%; /* Light warm tone */
+
+--secondary-foreground: 220 26% 14%;
+
+--muted: 45 15% 94%; /* Subtle warm muted */
+
+--muted-foreground: 220 13% 45%; /* Medium navy muted text */
+
+--accent: 43 96% 56%; /* Premium gold accent */
+
+--accent-foreground: 220 26% 14%; /* Dark text on gold */
+
+--destructive: 0 84.2% 60.2%;
+
+--destructive-foreground: 0 0% 98%;
+
+--border: 45 15% 87%; /* Warm border */
+
+--input: 45 15% 94%; /* Warm input background */
+
+--ring: 43 96% 56%; /* Gold focus ring */
+
+
+/* Premium Color Extensions */
+
+--premium-gold: 43 96% 56%; /* Rich gold */
+
+--premium-navy: 220 26% 14%; /* Deep navy */
+
+--premium-cream: 45 15% 97%; /* Warm cream */
+
+--premium-charcoal: 220 13% 18%; /* Rich charcoal */
+
+--premium-sage: 160 30% 85%; /* Soft sage green */
+
+--premium-copper: 25 85% 60%; /* Warm copper */
+
+
+/* Luxury Gradients */
+
+--gradient-premium: linear-gradient(135deg, hsl(43, 96%, 56%) 0%, hsl(25, 85%, 60%) 100%);
+
+--gradient-subtle: linear-gradient(135deg, hsl(45, 15%, 97%) 0%, hsl(45, 25%, 90%) 100%);
+
+--gradient-navy: linear-gradient(135deg, hsl(220, 26%, 14%) 0%, hsl(220, 13%, 18%) 100%);
+
+
+--radius: 0.75rem; /* Slightly more rounded for premium feel */
+
+}
+
+.dark {
+
+--background: 0 0% 3.9%;
+
+--foreground: 0 0% 98%;
+
+--card: 0 0% 3.9%;
+
+--card-foreground: 0 0% 98%;
+
+--popover: 0 0% 3.9%;
+
+--popover-foreground: 0 0% 98%;
+
+--primary: 0 0% 98%;
+
+--primary-foreground: 0 0% 9%;
+
+--secondary: 0 0% 14.9%;
+
+--secondary-foreground: 0 0% 98%;
+
+--muted: 0 0% 14.9%;
+
+--muted-foreground: 0 0% 63.9%;
+
+--accent: 0 0% 14.9%;
+
+--accent-foreground: 0 0% 98%;
+
+--destructive: 0 62.8% 30.6%;
+
+--destructive-foreground: 0 0% 98%;
+
+--border: 0 0% 14.9%;
+
+--input: 0 0% 14.9%;
+
+--ring: 0 0% 83.1%;
+
+--chart-1: 220 70% 50%;
+
+--chart-2: 160 60% 45%;
+
+--chart-3: 30 80% 55%;
+
+--chart-4: 280 65% 60%;
+
+--chart-5: 340 75% 55%;
+
+}
+
+}
+
+/* Premium Utility Classes */
+
+@layer utilities {
+
+.gradient-premium {
+
+background: var(--gradient-premium);
+
+}
+
+
+.gradient-subtle {
+
+background: var(--gradient-subtle);
+
+}
+
+
+.gradient-navy {
+
+background: var(--gradient-navy);
+
+}
+
+
+.text-premium-gold {
+
+color: hsl(var(--premium-gold));
+
+}
+
+
+.text-premium-navy {
+
+color: hsl(var(--premium-navy));
+
+}
+
+
+.bg-premium-cream {
+
+background-color: hsl(var(--premium-cream));
+
+}
+
+
+.shadow-premium {
+
+box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.1), 0 4px 25px -5px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.shadow-premium-lg {
+
+box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15), 0 10px 35px -8px rgba(0, 0, 0, 0.08);
+
+}
+
+}
+
+@layer base {
+
+* {
+
+@apply border-border;
+
+}
+
+body {
+
+@apply bg-background text-foreground font-body;
+
+}
+
+}
+
+```
