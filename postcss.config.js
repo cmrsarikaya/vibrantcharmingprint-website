@@ -1,5 +1,3 @@
-```javascript
-
 module.exports = {
 
 plugins: {
@@ -10,6 +8,4 @@ autoprefixer: {},
 
 },
 
-}
-
-```
+}  
