@@ -89,7 +89,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12 px-4">
           {categories.map((category) => (
             <button
               key={category}
