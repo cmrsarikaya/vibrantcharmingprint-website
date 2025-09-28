@@ -7,10 +7,13 @@ const ProductCard = ({ product }) => {
       {/* Image */}
       <div className="relative overflow-hidden">
         <img
-          src={product.images[0]}
-          alt={product.title}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+  src={product.images[0]}
+  alt={product.title}
+  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+  loading="lazy"
+  decoding="async"
+  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+/>
         {/* Discount Badge */}
         {product.discount && (
           <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
