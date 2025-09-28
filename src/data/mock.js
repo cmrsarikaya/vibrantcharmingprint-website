@@ -1,108 +1,172 @@
 export const products = [
   {
     id: 1,
-    title: "Modern Abstract Wall Art Set",
-    category: "Abstract",
-    images: ["https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400"],
-    description: "Elegant abstract prints perfect for modern living spaces. Instant download, ready to print.",
+    title: "Vintage Black Sheep Painting | Moody Cottagecore Farmhouse Wall Art",
+    category: "Animals & Nature",
+    images: ["https://i.etsystatic.com/54140009/r/il/6f79c3/7183927572/il_340x270.7183927572_jplp.jpg"],
+    description: "Moody cottagecore farmhouse wall art featuring a vintage black sheep painting. Perfect for pastoral French country digital download.",
     discount: "30% OFF",
-    tags: ["modern", "abstract", "minimalist"],
-    leadMagnet: "Free styling guide included"
+    tags: ["cottagecore", "farmhouse", "vintage"],
+    leadMagnet: "Free framing guide included",
+    etsy_url: "https://www.etsy.com/listing/4366385422/"
   },
   {
     id: 2,
-    title: "Botanical Prints Collection",
-    category: "Nature",
-    images: ["https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400"],
-    description: "Beautiful botanical illustrations for nature lovers. High-resolution digital downloads.",
+    title: "Antique Crane Watercolor Print | Japandi Wall Art",
+    category: "Japandi",
+    images: ["https://i.etsystatic.com/54140009/r/il/21167a/7155982396/il_340x270.7155982396_t7fa.jpg"],
+    description: "Elegant antique crane watercolor print with Japandi aesthetic. Instant download for modern minimalist spaces.",
     discount: "30% OFF",
-    tags: ["botanical", "nature", "green"],
-    leadMagnet: "Free plant care tips"
+    tags: ["japandi", "crane", "watercolor"],
+    leadMagnet: "Free styling tips included",
+    etsy_url: "https://www.etsy.com/listing/4361026866/"
   },
   {
     id: 3,
-    title: "Inspirational Quote Prints",
-    category: "Typography",
-    images: ["https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"],
-    description: "Motivational typography prints to inspire your daily life. Multiple format options.",
+    title: "Gossiping Geese Wall Art | Whimsical Retro Pop",
+    category: "Kitchen & Bar",
+    images: ["https://i.etsystatic.com/54140009/r/il/df3ccd/7214985188/il_340x270.7214985188_f7h2.jpg"],
+    description: "Whimsical retro pop art featuring gossiping geese. Perfect pink kitchen and bar decor with playful charm.",
     discount: "30% OFF",
-    tags: ["quotes", "motivation", "typography"],
-    leadMagnet: "Free font pairing guide"
+    tags: ["retro", "kitchen", "whimsical"],
+    leadMagnet: "Free color matching guide",
+    etsy_url: "https://www.etsy.com/listing/4363799037/"
   },
   {
     id: 4,
-    title: "Geometric Pattern Art",
-    category: "Geometric",
-    images: ["https://images.unsplash.com/photo-1558618666-4c0c4347d9ca?w=400"],
-    description: "Contemporary geometric designs that add visual interest to any room.",
+    title: "Formula 1 Racing Art | Retro Mid-Century Motorsport Poster",
+    category: "Car Poster Art",
+    images: ["https://i.etsystatic.com/54140009/r/il/24fe9f/7176514306/il_340x270.7176514306_q0vf.jpg"],
+    description: "Retro mid-century motorsport poster featuring Formula 1 racing art. 'Lights Out' wall decor for racing enthusiasts.",
     discount: "30% OFF",
-    tags: ["geometric", "contemporary", "patterns"],
-    leadMagnet: "Free color matching tips"
+    tags: ["formula1", "racing", "retro"],
+    leadMagnet: "Free print size guide",
+    etsy_url: "https://www.etsy.com/listing/4364958278/"
   },
   {
     id: 5,
-    title: "Vintage Map Collection",
-    category: "Vintage",
-    images: ["https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400"],
-    description: "Antique-style maps perfect for travelers and history enthusiasts.",
+    title: "African Woman Wall Art | Bold Minimalist Fashion Illustration",
+    category: "Fashion & Portrait",
+    images: ["https://i.etsystatic.com/54140009/r/il/acecc7/7263199075/il_340x270.7263199075_m6hb.jpg"],
+    description: "Bold minimalist fashion illustration featuring an African woman in cobalt blue zebra dress. Modern artistic portrait.",
     discount: "30% OFF",
-    tags: ["vintage", "maps", "travel"],
-    leadMagnet: "Free framing guide"
+    tags: ["fashion", "minimalist", "portrait"],
+    leadMagnet: "Free gallery wall tips",
+    etsy_url: "https://www.etsy.com/listing/4372938779/"
   },
   {
     id: 6,
-    title: "Watercolor Florals",
-    category: "Floral",
-    images: ["https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400"],
-    description: "Delicate watercolor flower paintings that bring softness to your space.",
+    title: "Monaco Grand Prix Art | Vintage Motorsport Wall Art",
+    category: "Car Poster Art", 
+    images: ["https://i.etsystatic.com/54140009/r/il/01a348/7223819473/il_340x270.7223819473_57fx.jpg"],
+    description: "Vintage motorsport wall art featuring Monaco Grand Prix. Ferrari F2001 tribute honoring Michael Schumacher's legacy.",
     discount: "30% OFF",
-    tags: ["watercolor", "floral", "soft"],
-    leadMagnet: "Free arrangement ideas"
+    tags: ["monaco", "ferrari", "motorsport"],
+    leadMagnet: "Free racing decor ideas",
+    etsy_url: "https://www.etsy.com/listing/4364833563/"
+  },
+  {
+    id: 7,
+    title: "Italian Window Art – Seaside View Print",
+    category: "Travel & Scenery",
+    images: ["https://i.etsystatic.com/54140009/r/il/be78b7/6918152363/il_340x270.6918152363_cbaz.jpg"],
+    description: "Mediterranean coastal print featuring Italian window with seaside view. Perfect for bringing vacation vibes home.",
+    discount: "30% OFF",
+    tags: ["italian", "coastal", "mediterranean"],
+    leadMagnet: "Free Mediterranean decor guide",
+    etsy_url: "https://www.etsy.com/listing/4307044378/"
+  },
+  {
+    id: 8,
+    title: "Flying Crane Japandi Wall Art | Minimalist Wabi Sabi Zen",
+    category: "Japandi",
+    images: ["https://i.etsystatic.com/54140009/r/il/064cfc/7228979463/il_340x270.7228979463_1x35.jpg"],
+    description: "Minimalist wabi sabi zen art featuring flying crane in sage green. Japanese birds for peaceful interior design.",
+    discount: "30% OFF",
+    tags: ["japandi", "zen", "minimalist"],
+    leadMagnet: "Free zen styling tips",
+    etsy_url: "https://www.etsy.com/listing/4365829473/"
   }
 ];
 
 export const categories = [
-  "All", "Abstract", "Nature", "Typography", "Geometric", "Vintage", "Floral"
+  "All", 
+  "Abstract & Geometric", 
+  "Car Poster Art", 
+  "Nursery & Animal Art", 
+  "Islamic Wall Art", 
+  "Japandi Wall Art",
+  "Travel & Scenery",
+  "Fashion & Portrait",
+  "Kitchen & Bar"
 ];
 
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah M.",
+    name: "Samantha",
     rating: 5,
-    text: "Beautiful designs and excellent quality! The prints look amazing in my living room.",
-    verified: true
+    text: "So cute and easy to download!",
+    verified: true,
+    date: "Sep 15, 2025"
   },
   {
     id: 2,
-    name: "Michael R.",
+    name: "Kaisa",
     rating: 5,
-    text: "Fast download, high resolution files. Exactly what I was looking for!",
-    verified: true
+    text: "Thanks for the great print",
+    verified: true,
+    date: "Sep 18, 2025"
   },
   {
     id: 3,
-    name: "Emma L.",
+    name: "Cory",
     rating: 5,
-    text: "Love the variety and style. Customer service is outstanding too!",
-    verified: true
+    text: "Excellent quality. I love my new prints! I even got an extra one for free after my purchase!!",
+    verified: true,
+    date: "Sep 10, 2025"
+  },
+  {
+    id: 4,
+    name: "Kim",
+    rating: 5,
+    text: "So cute and printing was simple",
+    verified: true,
+    date: "Apr 25, 2025"
+  },
+  {
+    id: 5,
+    name: "Ravi",
+    rating: 5,
+    text: "Fast, easy, and great quality",
+    verified: true,
+    date: "Apr 17, 2025"
   }
 ];
 
 export const storeInfo = {
   name: "VibrantCharmingPrint",
-  tagline: "Premium Digital Wall Art & Printable Designs",
-  description: "Transform your space with our carefully curated collection of digital wall art. From modern abstracts to botanical prints, find the perfect pieces to express your unique style.",
+  tagline: "Premium Printable Wall Art | Modern & Minimal",
+  description: "Transform your space with our carefully curated collection of premium digital wall art. From modern minimalist pieces to vibrant illustrations, find the perfect prints to express your unique style.",
+  owner: "Cemre Sarıkaya",
+  location: "Çanakkale, Türkiye",
+  stats: {
+    sales: 75,
+    rating: 5.0,
+    reviews: 5,
+    timeOnEtsy: "7 months"
+  },
   features: [
     "Instant Digital Downloads",
-    "High-Resolution Files", 
+    "High-Resolution Files (300 DPI)", 
     "Multiple Size Options",
-    "Commercial License Available",
+    "No Shipping Required",
     "24/7 Customer Support"
   ],
+  announcement: "✨ Welcome to Vibrant Charming Print ✨ Discover premium printable wall art designed to bring calm, beauty, and inspiration into your home. Each piece is created with a minimalist & modern touch, crafted to transform blank walls into meaningful stories. 🌿",
   socialLinks: {
     etsy: "https://www.etsy.com/shop/VibrantCharmingPrint",
-    pinterest: "https://pinterest.com/vibrantcharmingprint",
-    instagram: "@vibrantcharmingprint"
+    pinterest: "https://tr.pinterest.com/VibrantCharmingPrints/",
+    instagram: "https://www.instagram.com/vibrantcharmingprint"
   }
 };
