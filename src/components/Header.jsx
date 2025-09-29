@@ -45,54 +45,47 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile Navigation */}
-{isMenuOpen && (
-  <div className="md:hidden">
-    <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200 shadow-lg">
-      {navItems.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          {item.name}
-        </a>
-      ))}
-      <div className="pt-3">
-        <a
-          href="#products"
-          className="block mx-3 px-4 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg text-center font-medium hover:from-amber-600 hover:to-orange-600 transition-all duration-200"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Shop Now
-        </a>
-      </div>
-    </div>
-  </div>
-)}
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-amber-600 p-2 rounded-lg transition-colors duration-200"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Tek bir menü */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200 shadow-lg rounded-b-lg">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50"
+                  className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a
-                href="#products"
-                className="block px-3 py-2 mt-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg text-center font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Shop Now
-              </a>
+              <div className="pt-3">
+                <a
+                  href="#products"
+                  className="block mx-3 px-4 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg text-center font-medium hover:from-amber-600 hover:to-orange-600 transition-all duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Shop Now
+                </a>
+              </div>
             </div>
           </div>
         )}
