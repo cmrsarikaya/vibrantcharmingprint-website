@@ -1,104 +1,103 @@
-export const products = [
+export const mockProducts = [
   {
     id: 1,
     title: "Vintage Black Sheep Painting | Moody Cottagecore Farmhouse Wall Art",
     category: "Animals & Nature",
-    images: ["https://i.etsystatic.com/54140009/r/il/6f79c3/7183927572/il_340x270.7183927572_jplp.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/6f79c3/7183927572/il_340x270.7183927572_jplp.jpg",
     description: "Moody cottagecore farmhouse wall art featuring a vintage black sheep painting. Perfect for pastoral French country digital download.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["cottagecore", "farmhouse", "vintage"],
-    leadMagnet: "Free framing guide included",
-    etsy_url: "https://www.etsy.com/listing/4366385422/"
+    etsyUrl: "https://www.etsy.com/listing/4366385422/"
   },
   {
     id: 2,
     title: "Antique Crane Watercolor Print | Japandi Wall Art",
     category: "Japandi",
-    images: ["https://i.etsystatic.com/54140009/r/il/21167a/7155982396/il_340x270.7155982396_t7fa.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/21167a/7155982396/il_340x270.7155982396_t7fa.jpg",
     description: "Elegant antique crane watercolor print with Japandi aesthetic. Instant download for modern minimalist spaces.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["japandi", "crane", "watercolor"],
-    leadMagnet: "Free styling tips included",
-    etsy_url: "https://www.etsy.com/listing/4361026866/"
+    etsyUrl: "https://www.etsy.com/listing/4361026866/"
   },
   {
     id: 3,
     title: "Gossiping Geese Wall Art | Whimsical Retro Pop",
     category: "Kitchen & Bar",
-    images: ["https://i.etsystatic.com/54140009/r/il/df3ccd/7214985188/il_340x270.7214985188_f7h2.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/df3ccd/7214985188/il_340x270.7214985188_f7h2.jpg",
     description: "Whimsical retro pop art featuring gossiping geese. Perfect pink kitchen and bar decor with playful charm.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["retro", "kitchen", "whimsical"],
-    leadMagnet: "Free color matching guide",
-    etsy_url: "https://www.etsy.com/listing/4363799037/"
+    etsyUrl: "https://www.etsy.com/listing/4363799037/"
   },
   {
     id: 4,
     title: "Formula 1 Racing Art | Retro Mid-Century Motorsport Poster",
     category: "Car Poster Art",
-    images: ["https://i.etsystatic.com/54140009/r/il/24fe9f/7176514306/il_340x270.7176514306_q0vf.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/24fe9f/7176514306/il_340x270.7176514306_q0vf.jpg",
     description: "Retro mid-century motorsport poster featuring Formula 1 racing art. 'Lights Out' wall decor for racing enthusiasts.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["formula1", "racing", "retro"],
-    leadMagnet: "Free print size guide",
-    etsy_url: "https://www.etsy.com/listing/4364958278/"
+    etsyUrl: "https://www.etsy.com/listing/4364958278/"
   },
   {
     id: 5,
     title: "African Woman Wall Art | Bold Minimalist Fashion Illustration",
     category: "Fashion & Portrait",
-    images: ["https://i.etsystatic.com/54140009/r/il/acecc7/7263199075/il_340x270.7263199075_m6hb.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/acecc7/7263199075/il_340x270.7263199075_m6hb.jpg",
     description: "Bold minimalist fashion illustration featuring an African woman in cobalt blue zebra dress. Modern artistic portrait.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["fashion", "minimalist", "portrait"],
-    leadMagnet: "Free gallery wall tips",
-    etsy_url: "https://www.etsy.com/listing/4372938779/"
+    etsyUrl: "https://www.etsy.com/listing/4372938779/"
   },
   {
     id: 6,
     title: "Monaco Grand Prix Art | Vintage Motorsport Wall Art",
-    category: "Car Poster Art", 
-    images: ["https://i.etsystatic.com/54140009/r/il/01a348/7223819473/il_340x270.7223819473_57fx.jpg"],
+    category: "Car Poster Art",
+    image: "https://i.etsystatic.com/54140009/r/il/01a348/7223819473/il_340x270.7223819473_57fx.jpg",
     description: "Vintage motorsport wall art featuring Monaco Grand Prix. Ferrari F2001 tribute honoring Michael Schumacher's legacy.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["monaco", "ferrari", "motorsport"],
-    leadMagnet: "Free racing decor ideas",
-    etsy_url: "https://www.etsy.com/listing/4364833563/"
+    etsyUrl: "https://www.etsy.com/listing/4364833563/"
   },
   {
     id: 7,
     title: "Italian Window Art – Seaside View Print",
     category: "Travel & Scenery",
-    images: ["https://i.etsystatic.com/54140009/r/il/be78b7/6918152363/il_340x270.6918152363_cbaz.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/be78b7/6918152363/il_340x270.6918152363_cbaz.jpg",
     description: "Mediterranean coastal print featuring Italian window with seaside view. Perfect for bringing vacation vibes home.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["italian", "coastal", "mediterranean"],
-    leadMagnet: "Free Mediterranean decor guide",
-    etsy_url: "https://www.etsy.com/listing/4307044378/"
+    etsyUrl: "https://www.etsy.com/listing/4307044378/"
   },
   {
     id: 8,
     title: "Flying Crane Japandi Wall Art | Minimalist Wabi Sabi Zen",
     category: "Japandi",
-    images: ["https://i.etsystatic.com/54140009/r/il/064cfc/7228979463/il_340x270.7228979463_1x35.jpg"],
+    image: "https://i.etsystatic.com/54140009/r/il/064cfc/7228979463/il_340x270.7228979463_1x35.jpg",
     description: "Minimalist wabi sabi zen art featuring flying crane in sage green. Japanese birds for peaceful interior design.",
-    discount: "30% OFF",
+    originalPrice: "$12.99",
+    currentPrice: "$8.99",
     tags: ["japandi", "zen", "minimalist"],
-    leadMagnet: "Free zen styling tips",
-    etsy_url: "https://www.etsy.com/listing/4365829473/"
+    etsyUrl: "https://www.etsy.com/listing/4365829473/"
   }
 ];
 
-export const categories = [
+// Kategorileri ürünlerle eşleştirin
+export const productCategories = [
   "All", 
-  "Abstract & Geometric", 
+  "Animals & Nature",
   "Car Poster Art", 
-  "Nursery & Animal Art", 
-  "Islamic Wall Art", 
-  "Japandi Wall Art",
-  "Travel & Scenery",
   "Fashion & Portrait",
-  "Kitchen & Bar"
+  "Japandi",
+  "Kitchen & Bar",
+  "Travel & Scenery"
 ];
 
 export const testimonials = [
