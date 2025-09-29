@@ -1,9 +1,71 @@
 import React, { useState, useMemo } from 'react';
 import { ExternalLink, Filter, Star } from 'lucide-react';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
 import { mockProducts, productCategories } from '../data/mock';
+
+// Simple Button component without ui dependency
+const Button = ({ children, onClick, disabled, variant = "default", size = "default", className = "" }) => {
+  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50";
+  
+  const variants = {
+    default: "bg-slate-900 text-slate-50 hover:bg-slate-800",
+    outline: "border border-slate-200 hover:bg-slate-100 text-slate-900"
+  };
+  
+  const sizes = {
+    default: "h-10 px-4 py-2",
+    sm: "h-8 rounded-md px-3 text-sm"
+  };
+  
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
+    >
+      {children}
+    </button>
+  );
+};
+
+// Simple Badge component
+const Badge = ({ children, className = "", variant = "default" }) => {
+  const baseClasses = "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold";
+  const variants = {
+    default: "bg-slate-900 text-slate-50",
+    secondary: "bg-slate-100 text-slate-900"
+  };
+  
+  return (
+    <div className={`${baseClasses} ${variants[variant]} ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+// Simple Card components
+const Card = ({ children, className = "" }) => (
+  <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+    {children}
+  </div>
+);
+
+const CardHeader = ({ children, className = "" }) => (
+  <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+    {children}
+  </div>
+);
+
+const CardContent = ({ children, className = "" }) => (
+  <div className={`p-6 pt-0 ${className}`}>
+    {children}
+  </div>
+);
+
+const CardFooter = ({ children, className = "" }) => (
+  <div className={`flex items-center p-6 pt-0 ${className}`}>
+    {children}
+  </div>
+);
 
 const ProductsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -27,6 +89,7 @@ const ProductsSection = () => {
   };
 
   const handleEtsyRedirect = (etsyUrl) => {
+    console.log('Redirecting to:', etsyUrl); // Debug log
     window.open(etsyUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -70,7 +133,7 @@ const ProductsSection = () => {
         {/* Premium Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           {currentProducts.map((product) => (
-            <Card key={product.id} className="group overflow-hidden border-0 shadow-premium hover:shadow-premium-lg transition-all duration-500 transform hover:-translate-y-2 bg-white rounded-2xl">
+            <Card key={product.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 bg-white rounded-2xl">
               <CardHeader className="p-0 relative overflow-hidden">
                 <div className="aspect-[4/3] relative rounded-t-2xl overflow-hidden">
                   <img 
@@ -78,10 +141,10 @@ const ProductsSection = () => {
                     alt={product.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-premium-navy/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                     <Button 
                       size="sm" 
-                      className="gradient-premium text-white hover:scale-105 transition-transform duration-300 shadow-premium rounded-full px-6"
+                      className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white hover:scale-105 transition-transform duration-300 shadow-lg rounded-full px-6"
                       onClick={() => handleEtsyRedirect(product.etsyUrl)}
                     >
                       <ExternalLink size={16} className="mr-2" />
@@ -89,48 +152,41 @@ const ProductsSection = () => {
                     </Button>
                   </div>
                 </div>
-                <Badge className="absolute top-4 left-4 bg-white/95 text-premium-navy font-body font-medium rounded-full px-3 py-1 shadow-sm">
+                <Badge className="absolute top-4 left-4 bg-white/95 text-slate-800 font-medium rounded-full px-3 py-1 shadow-sm">
                   {product.category}
                 </Badge>
                 {product.originalPrice && (
-                  <Badge className="absolute top-4 right-4 gradient-premium text-white animate-pulse font-body font-medium rounded-full px-3 py-1 shadow-premium">
+                  <Badge className="absolute top-4 right-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white animate-pulse font-medium rounded-full px-3 py-1 shadow-lg">
                     Limited time 30% OFF
                   </Badge>
                 )}
               </CardHeader>
               
               <CardContent className="p-8">
-                <h3 className="font-display font-semibold text-xl text-premium-navy mb-4 line-clamp-2 leading-tight">
+                <h3 className="font-semibold text-xl text-slate-800 mb-4 line-clamp-2 leading-tight">
                   {product.title}
                 </h3>
                 <div className="mb-6">
-                  <p className="font-body text-premium-navy/70 text-sm mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-3 leading-relaxed">
                     {product.description}
                   </p>
                   
                   {/* Premium Lead Magnet - Free Design Tips */}
-                  <div className="gradient-subtle border border-premium-gold/20 rounded-xl p-4 mb-4 shadow-sm">
+                  <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-4 mb-4 shadow-sm">
                     <div className="flex items-center mb-2">
-                      <div className="gradient-premium text-white text-xs font-bold px-3 py-1 rounded-full mr-3 shadow-sm">
+                      <div className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3 shadow-sm">
                         FREE
                       </div>
-                      <span className="font-body text-sm font-semibold text-premium-navy">Design Tips Included</span>
+                      <span className="text-sm font-semibold text-slate-800">Design Tips Included</span>
                     </div>
-                    <p className="font-body text-xs text-premium-navy/70 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       🎁 Get <strong>1 area styling guide FREE</strong> with every purchase + bonus room layout tips
-                    </p>
-                  </div>
-                  
-                  {/* Premium SEO content area */}
-                  <div className="min-h-[35px] border-l-2 border-premium-gold/30 pl-4 bg-premium-cream/50 rounded-r-lg">
-                    <p className="font-body text-xs text-premium-navy/40 italic">
-                      Premium SEO optimized content area - Coming soon
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {product.tags.slice(0, 3).map((tag, index) => (
-                    <Badge key={index} variant="secondary" className="font-body text-xs bg-premium-sage text-premium-navy rounded-full px-3 py-1">
+                    <Badge key={index} variant="secondary" className="text-xs bg-slate-100 text-slate-800 rounded-full px-3 py-1">
                       {tag}
                     </Badge>
                   ))}
@@ -139,16 +195,16 @@ const ProductsSection = () => {
               
               <CardFooter className="px-8 pb-8 pt-0 flex justify-between items-center">
                 <div className="flex flex-col items-start">
-                  <div className="flex items-center text-premium-gold mb-2">
+                  <div className="flex items-center text-yellow-600 mb-2">
                     <Star size={18} className="fill-current" />
-                    <span className="font-body text-sm text-premium-navy ml-2 font-medium">5.0</span>
+                    <span className="text-sm text-slate-800 ml-2 font-medium">5.0</span>
                   </div>
-                  <p className="font-body text-xs text-premium-gold font-medium">+ Free Design Guide</p>
+                  <p className="text-xs text-yellow-600 font-medium">+ Free Design Guide</p>
                 </div>
                 <Button 
                   size="sm"
                   onClick={() => handleEtsyRedirect(product.etsyUrl)}
-                  className="gradient-navy text-white hover:shadow-premium-lg transition-all duration-300 transform hover:scale-105 rounded-full px-6 py-2 font-body font-medium"
+                  className="bg-slate-800 text-white hover:bg-slate-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105 rounded-full px-6 py-2 font-medium"
                 >
                   Get on Etsy
                 </Button>
